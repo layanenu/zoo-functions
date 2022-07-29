@@ -9,8 +9,8 @@ const entrants = [
   { name: 'Carlos Nogueira', age: 50 },
 ];
 
-function countEntrants(entrants) {
-  return entrants.reduce(
+function countEntrants(visitantes) {
+  return visitantes.reduce(
     (acc, cliente) => {
       if (cliente.age < 18) {
         acc.child += 1;
@@ -27,11 +27,11 @@ function countEntrants(entrants) {
   );
 }
 
-function calculateEntry(entrants) {
-  if (entrants === undefined || Object.keys(entrants).length === 0) {
+function calculateEntry(visitantes) {
+  if (visitantes === undefined || Object.keys(visitantes).length === 0) {
     return 0;
   }
-  const clientesPorFaixaEtaria = countEntrants(entrants);
+  const clientesPorFaixaEtaria = countEntrants(visitantes);
   const TotalPricesadult = clientesPorFaixaEtaria.adult * 49.99;
   const TotalPricessenior = clientesPorFaixaEtaria.senior * 24.99;
   const TotalPricesChilds = clientesPorFaixaEtaria.child * 20.99;
