@@ -5,6 +5,8 @@ const dayError = 'The day must be valid. Example: Monday';
 
 const isStringRepresentNumber = (string, what) => {
   if (!/^\d+$/.test(string)) {
+    // espressão regular, nesse caso quer dizer, verifique se o valor do parametro string contém apenas caracteres numéricos (\d+), do início (^)
+    // ao final ($) da string.
     throw new Error(`The ${what} should represent a number`);
   }
 };
@@ -63,5 +65,7 @@ const getOpeningHours = (day, dataHour) => {
   message += openOrClosed(period, hour, open, close) ? 'open' : 'closed';
   return message;
 };
+
+// console.log(getOpeningHours('Thu', '09:00-AM'));
 
 module.exports = getOpeningHours;
