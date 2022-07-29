@@ -5,7 +5,7 @@ function getSpeciesByIds(...ids) {
   if (ids === undefined) {
     return [];
   }
-  const filtraAnimalPeloId = species.filter((animal) => ids.includes(animal.id));
+  const filtraAnimalPeloId = data.species.filter((animal) => ids.includes(animal.id));
   return filtraAnimalPeloId;
 }
 
