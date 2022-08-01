@@ -16,6 +16,6 @@ function countAnimals(animal) { // contar a quantidade de animais que residem no
   return filtraAnimal[0].residents.length;
 }
 
-console.log(countAnimals({ specie: 'elephants', sex: 'male' }));
+console.log(countAnimals());
 
 module.exports = countAnimals;
